@@ -30,8 +30,8 @@ func main() {
 	for i, x := range arr {
 		num, err := strconv.Atoi(x)
 		check(err)
-		if i % 2 == 0 {
-			left[i/2] =num
+		if i%2 == 0 {
+			left[i/2] = num
 		} else {
 			right[i/2] = num
 		}
@@ -39,14 +39,14 @@ func main() {
 	sort.Ints(left)
 	sort.Ints(right)
 	ans := 0
-	for i:=0;i<len(left);i++ {
+	for i := 0; i < len(left); i++ {
 		ans += abs(right[i] - left[i])
 	}
 	fmt.Println(ans)
 
 	count := make(map[int]int)
 	for _, x := range right {
-		count[x] ++
+		count[x]++
 	}
 	sim := 0
 	for _, x := range left {

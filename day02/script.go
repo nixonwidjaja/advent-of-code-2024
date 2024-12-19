@@ -11,7 +11,7 @@ func check(e error) {
 	if e != nil {
 		panic(e)
 	}
-} 
+}
 
 func abs(n int) int {
 	if n < 0 {
