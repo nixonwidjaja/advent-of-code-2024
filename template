@@ -1,0 +1,18 @@
+package main
+
+import (
+	"os"
+	"strings"
+)
+
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
+
+func main() {
+	data, err := os.ReadFile("./input")
+	check(err)
+	dataStr := strings.Split(string(data), "\n")
+}
