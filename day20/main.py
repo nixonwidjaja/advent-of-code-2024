@@ -45,10 +45,6 @@ def part_one():
     print(count)
 
 
-def check_bounds(n, m, x, y):
-    return 1 <= x < n - 1 and 1 <= y < m - 1
-
-
 def new_bfs(graph, startx, starty, endx, endy):
     chx = [0, 0, 1, -1]
     chy = [1, -1, 0, 0]
@@ -96,7 +92,6 @@ def part_two():
                 startx, starty = i, j
             if graph[i][j] == "E":
                 endx, endy = i, j
-    benchmark = bfs(graph, startx, starty, endx, endy)
     new_bfs(graph, startx, starty, endx, endy)
 
 
